@@ -1,0 +1,48 @@
+/* =========================================
+   MYKONOS PARFUMS — CSS VARIABLES
+   Dark Space Theme
+   ========================================= */
+:root {
+    /* Backgrounds */
+    --bg-deep: #05070a;
+    --bg-surface: rgba(15, 23, 42, 0.55);
+    --bg-card: rgba(20, 30, 50, 0.65);
+    --bg-card-hover: rgba(30, 40, 60, 0.75);
+
+    /* Text */
+    --text-main: #e6f1ff;
+    --text-muted: #94a3b8;
+    --text-accent: #06b6d4;
+    --text-gold: #f59e0b;
+
+    /* Accents */
+    --accent-purple: #8b5cf6;
+    --accent-teal: #06b6d4;
+    --accent-gold: #f59e0b;
+    --accent-pink: #ec4899;
+    --accent-glow: rgba(139, 92, 246, 0.35);
+
+    /* Borders */
+    --border: rgba(255, 255, 255, 0.08);
+    --border-focus: rgba(139, 92, 246, 0.4);
+
+    /* Badge colors */
+    --badge-new: #06b6d4;
+    --badge-best: #8b5cf6;
+    --badge-collab: #ec4899;
+    --badge-sunforged: #f59e0b;
+    --badge-glow: #a855f7;
+    --badge-sold: #64748b;
+
+    /* Typography */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+
+    /* Transitions & spacing */
+    --transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-fast: 0.2s ease;
+    --radius: 16px;
+    --radius-lg: 24px;
+    --max-width: 1200px;
+    --header-height: 80px;
+}

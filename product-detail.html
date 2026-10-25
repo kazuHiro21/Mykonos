@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail — Mykonos Parfums</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<div class="nebula"></div>
+<div class="stars"></div>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">MYKONOS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="collection.html">COLLECTION</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <button class="nav-mobile-btn" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<section class="product-hero">
+    <video autoplay muted loop playsinline preload="metadata" poster="Images and Videos/mykonos-grece.jpg">
+        <source src="Images and Videos/ssstik.io_@mykonosofficial_1775275609864.mp4" type="video/mp4">
+    </video>
+    <div class="product-hero-content" id="product-hero-content"></div>
+</section>
+
+<section class="product-detail" id="product-detail"></section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>You May <span>Also Like</span></h2>
+            <p>Complementary scents from the same family.</p>
+        </div>
+        <div class="products-grid" id="related-grid"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">MYKONOS</div>
+                <p>Born in Indonesia. Built for the world. The scent of a slow life.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">★</a>
+                    <a href="#" aria-label="TikTok">★</a>
+                    <a href="#" aria-label="WhatsApp">★</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="collection.html">All Fragrances</a></li>
+                    <li><a href="collection.html">New Arrivals</a></li>
+                    <li><a href="collection.html">Best Sellers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Care</h4>
+                <ul>
+                    <li><a href="#">Shipping &amp; Returns</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MYKONOS Parfums. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/nav.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        initNav();
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        const heroContent = document.getElementById("product-hero-content");
+        const detailEl = document.getElementById("product-detail");
+        const relatedGrid = document.getElementById("related-grid");
+
+        if (!id) {
+            heroContent.innerHTML = '<h1 style="color:var(--text-muted);">Product not found</h1>';
+            return;
+        }
+
+        await catalog.init("#collection-grid", null);
+        const product = catalog.getProductById(id);
+
+        if (!product) {
+            heroContent.innerHTML = '<h1 style="color:var(--text-muted);">Product not found</h1>';
+            return;
+        }
+
+        const price = new Intl.NumberFormat("id-ID", {
+            style: "currency",
+            currency: "IDR",
+            minimumFractionDigits: 0
+        }).format(product.price_idr);
+
+        const badgeHtml = product.badge ? `<span class="badge badge-${product.badge}">${product.badge}</span>` : "";
+        const soldHtml = product.status === "sold-out" ? `<span class="badge badge-sold">sold out</span>` : "";
+
+        heroContent.innerHTML = `
+            ${product.badge ? `<span class="badge badge-${product.badge}">${product.badge}</span>` : ""}
+            ${product.status === "sold-out" ? `<span class="badge badge-sold">sold out</span>` : ""}
+            <h1>${product.name}</h1>
+            <p>${product.edition} • ${product.family}</p>
+        `;
+
+        const related = catalog.getRelatedProducts(id);
+        const relatedHtml = related.length > 0
+            ? related.map(p => catalog.cardHTML(p)).join("")
+            : `<div style="grid-column:1/-1; text-align:center; padding:40px 20px; color:var(--text-muted);">No related products</div>`;
+
+        detailEl.innerHTML = `
+            <div class="product-detail-image">
+                <img src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.src='Images and Videos/INCEPTION.png'">
+            </div>
+            <div class="product-detail-info">
+                <div class="product-detail-meta">
+                    <span>${product.edition}</span>
+                    <span>${product.sizes.join(" • ")}</span>
+                    ${soldHtml}
+                </div>
+                <h1>${product.name}</h1>
+                <div class="product-family-tag">${product.family}</div>
+                <div class="product-price-block">${price}</div>
+                <p class="product-description" style="margin: 20px 0; line-height:1.8;">${product.description}</p>
+                <div class="product-sizes">
+                    ${product.sizes.map(size => `<button class="size-btn">${size}</button>`).join("")}
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add" ${product.status === "sold-out" ? "disabled" : ""}>
+                        ${product.status === "sold-out" ? "Sold Out" : "Add to Bag"}
+                    </button>
+                    <button class="btn-sample">Request Free Sample</button>
+                </div>
+
+                <div class="product-notes-section" style="margin-top: 30px;">
+                    <h3>Scent Notes</h3>
+                    <div class="notes-grid">
+                        <div class="note-group">
+                            <h4>Top</h4>
+                            <ul>${product.notes.top.map(n => `<li>${n}</li>`).join("")}</ul>
+                        </div>
+                        <div class="note-group">
+                            <h4>Middle</h4>
+                            <ul>${product.notes.middle.map(n => `<li>${n}</li>`).join("")}</ul>
+                        </div>
+                        <div class="note-group">
+                            <h4>Base</h4>
+                            <ul>${product.notes.base.map(n => `<li>${n}</li>`).join("")}</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        relatedGrid.innerHTML = relatedHtml;
+    });
+</script>
+
+</body>
+</html>

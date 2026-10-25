@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection — Mykonos Parfums</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<div class="nebula"></div>
+<div class="stars"></div>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">MYKONOS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="collection.html" class="active">COLLECTION</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <button class="nav-mobile-btn" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<section class="collection-banner">
+    <div class="container">
+        <div class="collection-banner-content">
+            <h1>Collection</h1>
+            <p>Discover your signature scent across our fragrance families.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="collection-header-actions">
+            <div class="collection-count" id="collection-count"></div>
+            <div class="filters" id="filters"></div>
+        </div>
+        <div class="products-grid" id="collection-grid"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">MYKONOS</div>
+                <p>Born in Indonesia. Built for the world. The scent of a slow life.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">★</a>
+                    <a href="#" aria-label="TikTok">★</a>
+                    <a href="#" aria-label="WhatsApp">★</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="collection.html">All Fragrances</a></li>
+                    <li><a href="collection.html">New Arrivals</a></li>
+                    <li><a href="collection.html">Best Sellers</a></li>
+                    <li><a href="collection.html">Sunforged Collection</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Care</h4>
+                <ul>
+                    <li><a href="#">Shipping &amp; Returns</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Wholesale Inquiries</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@mykonosparfums.com">hello@mykonosparfums.com</a></li>
+                    <li>Indonesia • Malaysia • Philippines</li>
+                    <li>@mykonosparfums</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MYKONOS Parfums. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/nav.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        initNav();
+
+        const filterLabels = {
+            all: "All",
+            "Fresh & Aquatic": "Fresh & Aquatic",
+            Citrus: "Citrus",
+            "Fruity & Gourmand": "Fruity & Gourmand",
+            "Woody & Spicy": "Woody & Spicy",
+            Floral: "Floral",
+            "Woody & Vanilla": "Woody & Vanilla",
+            Gourmand: "Gourmand",
+            "Floral & Musky": "Floral & Musky",
+            Sunforged: "Sunforged Collection",
+            "Special Edition": "Special Edition"
+        };
+
+        const filtersEl = document.getElementById("filters");
+        const allFilters = ["all", ...Object.keys(filterLabels).filter(f => f !== "all")];
+
+        filtersEl.innerHTML = allFilters.map(f => `
+            <button class="filter-btn" data-filter="${f}">${filterLabels[f] || f}</button>
+        `).join("");
+
+        await catalog.init("#collection-grid", "collection-count");
+
+        // Wire up filter buttons after init (init sets up its own listener; we re-attach for our custom labels)
+        document.querySelectorAll(".filter-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                catalog.setFilter(btn.dataset.filter);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

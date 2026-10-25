@@ -1,0 +1,255 @@
+/* =========================================
+   MYKONOS PARFUMS — RESPONSIVE
+   ========================================= */
+@media (max-width: 1024px) {
+    .landing-hero h1 {
+        font-size: 4.5rem;
+    }
+
+    .story-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-media-wrap {
+        aspect-ratio: auto;
+        height: 400px;
+        max-width: 100%;
+    }
+
+    .story-text h2 {
+        font-size: 2.8rem;
+    }
+
+    .story-lead {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        padding: 100px 5%;
+    }
+
+    .landing-section {
+        padding: 100px 5%;
+    }
+
+    .section-header h2 {
+        font-size: 2.8rem;
+    }
+
+    .newsletter-card {
+        padding: 60px 40px;
+        margin: 0 20px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .product-detail,
+    .about-content,
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-media-wrap {
+        aspect-ratio: auto;
+        height: 400px;
+    }
+
+    .about-page {
+        padding: 80px 5%;
+    }
+
+    .contact-page {
+        padding: 80px 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 16px 30px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-mobile-btn {
+        display: block;
+    }
+
+    .landing-hero h1 {
+        font-size: 3rem;
+        letter-spacing: 4px;
+    }
+
+    .landing-hero .hero-tag {
+        font-size: 0.7rem;
+        padding: 8px 18px;
+    }
+
+    .landing-hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .product-img-wrap {
+        height: 220px;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .story-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .story-lead {
+        font-size: 1.1rem;
+    }
+
+    .story-text p {
+        font-size: 1rem;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .category-tile {
+        padding: 32px 20px;
+        font-size: 1.2rem;
+    }
+
+    .newsletter-card {
+        padding: 50px 30px;
+    }
+
+    .newsletter-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .filters {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        scrollbar-width: none;
+    }
+
+    .filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    footer {
+        padding: 50px 5% 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 14px 20px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .landing-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .landing-hero p {
+        font-size: 1rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .product-img-wrap {
+        height: 200px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-tile {
+        font-size: 1.1rem;
+        padding: 28px 16px;
+    }
+
+    .story-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .newsletter-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .newsletter-card {
+        padding: 40px 24px;
+    }
+
+    .product-detail h1 {
+        font-size: 1.8rem;
+    }
+
+    .product-price-block {
+        font-size: 1.3rem;
+    }
+
+    .size-btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+
+    .product-actions {
+        flex-direction: column;
+    }
+
+    .contact-info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .collection-banner h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+}

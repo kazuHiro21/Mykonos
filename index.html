@@ -3,145 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mykonos Parfums</title>
+    <title>Mykonos Parfums — The Scent of a Slow Life</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
+
+<div class="nebula"></div>
+<div class="stars"></div>
 
 <nav class="navbar">
     <div class="nav-container">
         <div class="logo">MYKONOS</div>
-
         <ul class="nav-links">
-            <li><a href="#about">ABOUT</a></li>
             <li><a href="#collection">COLLECTION</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
+        <button class="nav-mobile-btn" aria-label="Menu">☰</button>
     </div>
 </nav>
 
-
-<section class="hero">
-    <video autoplay muted loop>
-        <source src="Images and Videos/ssstik.io_@mykonosofficial_1775275609864.mp4" type="video/mp4">
-    </video>
-
-    <div class="hero-overlay">
+<!-- HERO — Apple-style landing first section -->
+<section class="hero landing-hero">
+    <div class="hero-bg" style="background-image: url('Images and Videos/mykonos-grece.jpg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-tag">New Collection</span>
         <h1>MYKONOS</h1>
+        <p>Born in Indonesia. Built for the world.<br>The scent of a slow life.</p>
+        <div class="hero-actions">
+            <a href="#collection" class="btn btn-primary">Explore Collection</a>
+            <a href="#about" class="btn btn-secondary">Our Story</a>
+        </div>
     </div>
 </section>
 
-
-<section id="about" class="about">
-
-    <div class="about-bg"></div>
-
-    <div class="about-container">
-
-
-        <div class="about-media">
-            <video autoplay muted loop>
-                <source src="Images and Videos/ssstik.io_@mykonosph_1775279539646.mp4" type="video/mp4">
-            </video>
+<!-- FEATURED SCENTS — horizontal highlight -->
+<section class="section landing-section" id="featured">
+    <div class="container">
+        <div class="section-header">
+            <h2>Featured <span>Scents</span></h2>
+            <p>Our most-loved fragrances, now with more to love.</p>
         </div>
+        <div class="products-grid" id="featured-grid"></div>
+    </div>
+</section>
 
-
-        <div class="about-text">
-            <h2>About Mykonos</h2>
-            <p>
-                Mykonos is a powerhouse of producing qualities and performing tons of scents across Indonesia.
-                Mykonos aims to expand and recognize globally by starting expanding in Southeast Asian Countries
-                like the Malaysia as our 2nd branch outside Indonesia, and finally! the Phillipines successful launched
-                last year. A scent that will get you compliments instead of complain, and will boost your daily confidence
-                wearing our fragrances. SEMANGAT MYKONOS! AYO BANGKIT MYKONOS! MABUHAY MYKONOS!.
+<!-- BRAND STORY — centered text + image -->
+<section class="section landing-section story-section" id="story">
+    <div class="container story-layout">
+        <div class="story-text">
+            <h2>The Scent of <span>a Slow Life</span></h2>
+            <p class="story-lead">
+                Mykonos began as a small operation in Indonesia, releasing a single men's cologne and a single women's perfume.
+                Within two years, the portfolio grew rapidly — driven by online demand and a commitment to skin-safe, long-lasting fragrances.
             </p>
+            <p>
+                The name draws on the Greek island of Mykonos — a nod to the breezy, sun-kissed vibe captured in each bottle.
+                Today, Mykonos expands across Southeast Asia and beyond, with branches in Malaysia and the Philippines,
+                and a recent entry into the United States market.
+            </p>
+            <a href="#about" class="btn btn-secondary">Read Our Story</a>
         </div>
-
+        <div class="story-image">
+            <div class="story-media-wrap">
+                <img src="Images and Videos/mykonos-grece.jpg" alt="Mykonos Brand" loading="lazy" onerror="this.style.display='none'">
+            </div>
+        </div>
     </div>
-
 </section>
 
-
-<section id="collection" class="collection">
-
-    <h2>Fresh Collection</h2>
-    <div class="product-row">
-
-        <a href="#" class="product-card">
-            <div class="product-img" style="background-image: url('Images and Videos/INCEPTION.png');"></div>
-            <h3>Inception 100ml</h3>
-            <h4>Dupe of LV Imagination</h4>
-            <p>₱2099</p>
-        </a>
-
-        <a href="#" class="product-card">
-            <div class="product-img" style="background-image: url('Images and Videos/SORRENTO.jpg');"></div>
-            <h3>Sorrento 100ml</h3>
-            <p>₱1999</p>
-        </a>
-
-        <a href="#" class="product-card">
-            <div class="product-img" style="background-image: url('Images and Videos/DREAMSCAPE.jpg');"></div>
-            <h3>Dreamscape</h3>
-            <p>₱1999</p>
-        </a>
-
-        <a href="#" class="product-card">
-            <div class="product-img" style="background-image: url('Images and Videos/GLITCH.jpg');"></div>
-            <h3>Glitch x Setiawande</h3>
-            <p>₱1999</p>
-        </a>
-
-        <a href="#" class="product-card">
-            <div class="product-img" style="background-image: url('Images and Videos/REFLECTION.jpg');"></div>
-            <h3>Reflection</h3>
-            <p>₱1999</p>
-        </a>
-
-        <a href="#" class="product-card">
-            <div class="product-img" style="background-image: url('img2.jpg');"></div>
-            <h3>Conquer</h3>
-            <p>₱1999</p>
-        </a>
-
-        <a href="#" class="product-card">
-            <div class="product-img" style="background-image: url('img2.jpg');"></div>
-            <h3>Penthouse</h3>
-            <p>₱1999</p>
-        </a>
-
-        <a href="#" class="product-card">
-            <div class="product-img" style="background-image: url('img2.jpg');"></div>
-            <h3>California Signature</h3>
-            <p>₱1999</p>
-        </a>
-
+<!-- COLLECTION CATEGORIES — Apple-style category tiles -->
+<section class="section landing-section" id="categories">
+    <div class="container">
+        <div class="section-header">
+            <h2>Shop by <span>Scent Family</span></h2>
+            <p>Discover your signature scent across our fragrance families.</p>
+        </div>
+        <div class="category-grid" id="category-grid"></div>
     </div>
+</section>
 
-    <h2>Sweet & Gourmand</h2>
-    <div class="product-row">
-
-        <a href="#" class="product-card">
-            <div class="product-img" style="background-image: url('Images and Videos/DARK SECRET.jpg');"></div>
-            <h3>Dark Secret 100ml</h3>
-            <p>₱1899</p>
-        </a>
-
-        <a href="#" class="product-card">
-            <div class="product-img" style="background-image: url('Images and Videos/ON THE ROCKS.webp');"></div>
-            <h3>On the Rocks</h3>
-            <p>₱1599</p>
-        </a>
-
+<!-- FULL COLLECTION -->
+<section class="section landing-section" id="collection">
+    <div class="container">
+        <div class="section-header">
+            <h2>The <span>Collection</span></h2>
+            <p>All fragrances. Filter by family, or browse everything.</p>
+        </div>
+        <div class="collection-header-actions">
+            <div class="collection-count" id="collection-count"></div>
+            <div class="filters" id="filters"></div>
+        </div>
+        <div class="products-grid" id="collection-grid"></div>
     </div>
+</section>
 
+<!-- NEWSLETTER -->
+<section class="section landing-section newsletter-section">
+    <div class="container newsletter-card">
+        <div class="newsletter-content">
+            <h2>Join the <span>List</span></h2>
+            <p>Get early access to new releases, restocks, and exclusive offers.</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Mykonos (Vibrant and Perfumery)</p>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">MYKONOS</div>
+                <p>Born in Indonesia. Built for the world. The scent of a slow life.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">★</a>
+                    <a href="#" aria-label="TikTok">★</a>
+                    <a href="#" aria-label="WhatsApp">★</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#collection">All Fragrances</a></li>
+                    <li><a href="#collection">New Arrivals</a></li>
+                    <li><a href="#collection">Best Sellers</a></li>
+                    <li><a href="#collection">Sunforged Collection</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Care</h4>
+                <ul>
+                    <li><a href="#">Shipping &amp; Returns</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Wholesale Inquiries</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@mykonosparfums.com">hello@mykonosparfums.com</a></li>
+                    <li>Indonesia • Malaysia • Philippines</li>
+                    <li>@mykonosparfums</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MYKONOS Parfums. All rights reserved.</p>
+        </div>
+    </div>
 </footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/nav.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        initNav();
+        await catalog.init("#collection-grid", "collection-count");
+
+        // Featured scents (best sellers + new)
+        const featured = catalog.products.filter(p => p.badge === "best-seller" || p.badge === "new");
+        const featuredGrid = document.getElementById("featured-grid");
+        if (featuredGrid) {
+            featuredGrid.innerHTML = featured.map(p => catalog.cardHTML(p)).join("");
+        }
+
+        // Category tiles
+        const categories = [
+            { name: "Fresh & Aquatic", key: "Fresh & Aquatic" },
+            { name: "Citrus", key: "Citrus" },
+            { name: "Fruity & Gourmand", key: "Fruity & Gourmand" },
+            { name: "Woody & Spicy", key: "Woody & Spicy" },
+            { name: "Floral", key: "Floral" },
+            { name: "Woody & Vanilla", key: "Woody & Vanilla" },
+            { name: "Sunforged Collection", key: "sunforged" },
+            { name: "Special Edition", key: "Special Edition" }
+        ];
+        const catGrid = document.getElementById("category-grid");
+        if (catGrid) {
+            catGrid.innerHTML = categories.map(c => `
+                <button class="category-tile" data-filter="${c.key}">
+                    <span class="category-name">${c.name}</span>
+                </button>
+            `).join("");
+            catGrid.querySelectorAll(".category-tile").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    catalog.setFilter(btn.dataset.filter);
+                    document.getElementById("collection").scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        }
+
+        // Filter buttons for collection section
+        const filterLabels = {
+            all: "All",
+            "Fresh & Aquatic": "Fresh & Aquatic",
+            Citrus: "Citrus",
+            "Fruity & Gourmand": "Fruity & Gourmand",
+            "Woody & Spicy": "Woody & Spicy",
+            Floral: "Floral",
+            "Woody & Vanilla": "Woody & Vanilla",
+            Gourmand: "Gourmand",
+            "Floral & Musky": "Floral & Musky",
+            Sunforged: "Sunforged Collection",
+            "Special Edition": "Special Edition"
+        };
+        const filtersEl = document.getElementById("filters");
+        const allFilters = ["all", ...Object.keys(filterLabels).filter(f => f !== "all")];
+        filtersEl.innerHTML = allFilters.map(f => `
+            <button class="filter-btn" data-filter="${f}">${filterLabels[f] || f}</button>
+        `).join("");
+        filtersEl.querySelectorAll(".filter-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                catalog.setFilter(btn.dataset.filter);
+            });
+        });
+
+        // Newsletter form
+        const nlForm = document.getElementById("newsletter-form");
+        if (nlForm) {
+            nlForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                const btn = nlForm.querySelector("button");
+                const orig = btn.textContent;
+                btn.textContent = "Subscribed...";
+                btn.disabled = true;
+                setTimeout(() => {
+                    btn.textContent = "Subscribe";
+                    btn.disabled = false;
+                    nlForm.reset();
+                    alert("Thank you for subscribing!");
+                }, 1000);
+            });
+        }
+    });
+</script>
 
 </body>
 </html>

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "inception",
+    "name": "Inception",
+    "edition": "Extrait de Parfum",
+    "sizes": ["50ml", "100ml"],
+    "price_idr": 449000,
+    "family": "Fresh & Aquatic",
+    "gender": "Unisex",
+    "inspired_by": "LV Imagination",
+    "notes": {
+      "top": ["Amalfi Lemon", "Bergamot"],
+      "middle": ["Lavender", "Aquatic Notes"],
+      "base": ["Clean Musk", "Ambroxan"]
+    },
+    "description": "Bright citrus meets calming lavender and clean musk — fresh, airy, like laundry drifting through the ocean breeze.",
+    "image": "Images and Videos/INCEPTION.png",
+    "status": "in-stock",
+    "badge": "best-seller",
+    "collection": null
+  },
+  {
+    "id": "sorrento",
+    "name": "Sorrento",
+    "edition": "Eau de Parfum",
+    "sizes": ["50ml", "100ml"],
+    "price_idr": 399000,
+    "family": "Citrus",
+    "gender": "Unisex",
+    "inspired_by": "Citrus Amalfi",
+    "notes": {
+      "top": ["Sicilian Lemon", "Orange Blossom"],
+      "middle": ["Rosemary", "Mint"],
+      "base": ["Cedarwood", "Musk"]
+    },
+    "description": "Mediterranean sunshine in a bottle — zesty lemon with herbal freshness.",
+    "image": "Images and Videos/SORRENTO.jpg",
+    "status": "in-stock",
+    "badge": null,
+    "collection": null
+  },
+  {
+    "id": "dreamscape",
+    "name": "Dreamscape",
+    "edition": "Eau de Parfum",
+    "sizes": ["50ml", "100ml"],
+    "price_idr": 499000,
+    "family": "Fruity & Gourmand",
+    "gender": "Women",
+    "inspired_by": "Fruity Floral",
+    "notes": {
+      "top": ["Pear", "Bergamot"],
+      "middle": ["Jasmine", "Peach"],
+      "base": ["Vanilla", "Cashmere Wood"]
+    },
+    "description": "A dreamy blend of juicy pear, white florals, and warm vanilla.",
+    "image": "Images and Videos/DREAMSCAPE.jpg",
+    "status": "in-stock",
+    "badge": "new",
+    "collection": null
+  },
+  {
+    "id": "glitch",
+    "name": "Glitch x Setiawande",
+    "edition": "Extrait de Parfum",
+    "sizes": ["50ml", "100ml"],
+    "price_idr": 549000,
+    "family": "Woody & Spicy",
+    "gender": "Unisex",
+    "inspired_by": "Collaboration",
+    "notes": {
+      "top": ["Pink Pepper", "Bergamot"],
+      "middle": ["Incense", "Cedar"],
+      "base": ["Oud", "Amber"]
+    },
+    "description": "A bold collab fragrance — spicy incense meets deep woody amber.",
+    "image": "Images and Videos/GLITCH.jpg",
+    "status": "in-stock",
+    "badge": "collab",
+    "collection": null
+  },
+  {
+    "id": "reflection",
+    "name": "Reflection",
+    "edition": "Eau de Parfum",
+    "sizes": ["50ml", "100ml"],
+    "price_idr": 399000,
+    "family": "Floral",
+    "gender": "Women",
+    "inspired_by": "White Floral",
+    "notes": {
+      "top": ["Bergamot", "Green Leaves"],
+      "middle": ["Jasmine", "White Flowers"],
+      "base": ["Sandalwood", "Musk"]
+    },
+    "description": "Clean white florals over soft musk — elegant and timeless.",
+    "image": "Images and Videos/REFLECTION.jpg",
+    "status": "in-stock",
+    "badge": null,
+    "collection": null
+  },
+  {
+    "id": "conquer",
+    "name": "Conquer",
+    "edition": "Eau de Parfum",
+    "sizes": ["100ml"],
+    "price_idr": 399000,
+    "family": "Woody & Vanilla",
+    "gender": "Men",
+    "inspired_by": "Woody Oriental",
+    "notes": {
+      "top": ["Bergamot", "Apple"],
+      "middle": ["Geranium", "Cinnamon"],
+      "base": ["Vanilla", "Sandalwood"]
+    },
+    "description": "A confident masculine scent — spicy apple with creamy vanilla base.",
+    "image": "Images and Videos/DREAMSCAPE.jpg",
+    "status": "in-stock",
+    "badge": null,
+    "collection": null
+  },
+  {
+    "id": "penthouse",
+    "name": "Penthouse",
+    "edition": "Extrait de Parfum",
+    "sizes": ["50ml", "100ml"],
+    "price_idr": 449000,
+    "family": "Woody & Spicy",
+    "gender": "Men",
+    "inspired_by": "Oriental Woody",
+    "notes": {
+      "top": ["Cardamom", "Citrus"],
+      "middle": ["Lavender", "Sage"],
+      "base": ["Leather", "Oakmoss"]
+    },
+    "description": "Sophisticated evening wear — leather, sage, and smoky woods.",
+    "image": "Images and Videos/GLITCH.jpg",
+    "status": "in-stock",
+    "badge": null,
+    "collection": null
+  },
+  {
+    "id": "california-signature",
+    "name": "California Signature",
+    "edition": "Eau de Parfum",
+    "sizes": ["100ml"],
+    "price_idr": 399000,
+    "family": "Fresh & Aquatic",
+    "gender": "Unisex",
+    "inspired_by": "Aquatic Citrus",
+    "notes": {
+      "top": ["Sea Salt", "Lemon"],
+      "middle": ["Lavender", "Sea Notes"],
+      "base": ["Ambroxan", "Cedar"]
+    },
+    "description": "Ocean breeze with citrus zest — clean, aquatic, summer-ready.",
+    "image": "Images and Videos/ON THE ROCKS.webp",
+    "status": "in-stock",
+    "badge": null,
+    "collection": null
+  },
+  {
+    "id": "dark-secret",
+    "name": "Dark Secret",
+    "edition": "Eau de Parfum",
+    "sizes": ["100ml"],
+    "price_idr": 379000,
+    "family": "Gourmand",
+    "gender": "Women",
+    "inspired_by": "Sweet Gourmand",
+    "notes": {
+      "top": ["Blackcurrant", "Bergamot"],
+      "middle": ["Rose", "Vanilla"],
+      "base": ["Patchouli", "Tonka Bean"]
+    },
+    "description": "Dark fruits wrapped in sweet vanilla and warm patchouli.",
+    "image": "Images and Videos/DARK SECRET.jpg",
+    "status": "in-stock",
+    "badge": null,
+    "collection": null
+  },
+  {
+    "id": "on-the-rocks",
+    "name": "On the Rocks",
+    "edition": "Eau de Parfum",
+    "sizes": ["100ml"],
+    "price_idr": 349000,
+    "family": "Woody & Vanilla",
+    "gender": "Unisex",
+    "inspired_by": "Althair",
+    "notes": {
+      "top": ["Bergamot", "Elemi"],
+      "middle": ["Vanilla", "Guaiac Wood"],
+      "base": ["Cashmeran", "Musk"]
+    },
+    "description": "Creamy vanilla woods — cozy, warm, unisex comfort.",
+    "image": "Images and Videos/ON THE ROCKS.webp",
+    "status": "in-stock",
+    "badge": null,
+    "collection": null
+  },
+  {
+    "id": "slow-living",
+    "name": "Slow Living",
+    "edition": "Eau de Parfum",
+    "sizes": ["50ml", "100ml"],
+    "price_idr": 449000,
+    "family": "Floral & Musky",
+    "gender": "Unisex",
+    "inspired_by": "Clean Musky Floral",
+    "notes": {
+      "top": ["Laundry Musk", "White Tea"],
+      "middle": ["Lily of the Valley", "Iris"],
+      "base": ["White Musk", "Amber"]
+    },
+    "description": "The scent of slow mornings — clean musk, white tea, and soft florals.",
+    "image": "Images and Videos/REFLECTION.jpg",
+    "status": "in-stock",
+    "badge": null,
+    "collection": null
+  },
+  {
+    "id": "untamed",
+    "name": "Untamed",
+    "edition": "Extrait de Parfum",
+    "sizes": ["100ml"],
+    "price_idr": 799000,
+    "family": "Sunforged",
+    "gender": "Unisex",
+    "inspired_by": "Wild Fruity Floral",
+    "notes": {
+      "top": ["Pear", "White Florals"],
+      "middle": ["Tropical Fruit", "Jasmine"],
+      "base": ["Creamy Woods", "Musk"]
+    },
+    "description": "From the Sunforged Collection — wild fruits meet creamy tropical woods.",
+    "image": "Images and Videos/DARK SECRET.jpg",
+    "status": "sold-out",
+    "badge": "sunforged",
+    "collection": "sunforged"
+  },
+  {
+    "id": "marbella",
+    "name": "Marbella",
+    "edition": "Extrait de Parfum",
+    "sizes": ["100ml"],
+    "price_idr": 749000,
+    "family": "Sunforged",
+    "gender": "Women",
+    "inspired_by": "Tropical Fruity",
+    "notes": {
+      "top": ["Mango", "Passionfruit"],
+      "middle": ["Coconut", "Tiare Flower"],
+      "base": ["Vanilla", "Sandalwood"]
+    },
+    "description": "Sunforged Collection — tropical escape with mango and coconut.",
+    "image": "Images and Videos/DREAMSCAPE.jpg",
+    "status": "sold-out",
+    "badge": "sunforged",
+    "collection": "sunforged"
+  },
+  {
+    "id": "nautilius",
+    "name": "Nautilius",
+    "edition": "Extrait de Parfum",
+    "sizes": ["50ml", "100ml"],
+    "price_idr": 699000,
+    "family": "Sunforged",
+    "gender": "Unisex",
+    "inspired_by": "Floral Fruity Fresh",
+    "notes": {
+      "top": ["Pear", "Bergamot", "White Florals"],
+      "middle": ["Jasmine", "Aquatic Notes"],
+      "base": ["Musk", "Cedarwood"]
+    },
+    "description": "Sunforged Collection — the freshest, floral-fruity release of 2026.",
+    "image": "Images and Videos/GLITCH.jpg",
+    "status": "in-stock",
+    "badge": "sunforged",
+    "collection": "sunforged"
+  },
+  {
+    "id": "inferno",
+    "name": "Inferno",
+    "edition": "Extrait de Parfum",
+    "sizes": ["100ml"],
+    "price_idr": 749000,
+    "family": "Sunforged",
+    "gender": "Unisex",
+    "inspired_by": "Dark Spicy Woody",
+    "notes": {
+      "top": ["Citrus", "Hot Spices"],
+      "middle": ["Moss", "Patchouli"],
+      "base": ["Oud", "Dark Amber"]
+    },
+    "description": "Sunforged Collection — dark, spicy, mossy, intense.",
+    "image": "Images and Videos/DARK SECRET.jpg",
+    "status": "in-stock",
+    "badge": "sunforged",
+    "collection": "sunforged"
+  },
+  {
+    "id": "luminos",
+    "name": "Luminos",
+    "edition": "Extrait de Parfum",
+    "sizes": ["50ml"],
+    "price_idr": 899000,
+    "family": "Special Edition",
+    "gender": "Unisex",
+    "inspired_by": "Glow-in-the-Dark",
+    "notes": {
+      "top": ["Citrus", "Floral"],
+      "middle": ["Secret Accord"],
+      "base": ["Musk", "Woods"]
+    },
+    "description": "Glows in the dark. Comes with UV torch. Radiant for those who shine brightest at night.",
+    "image": "Images and Videos/INCEPTION.png",
+    "status": "in-stock",
+    "badge": "glow-dark",
+    "collection": null
+  },
+  {
+    "id": "coconut-dream",
+    "name": "Coconut Dream",
+    "edition": "Eau de Parfum",
+    "sizes": ["50ml"],
+    "price_idr": 499000,
+    "family": "Gourmand",
+    "gender": "Unisex",
+    "inspired_by": "Coconut Vanilla",
+    "notes": {
+      "top": ["Coconut", "Aloe Vera", "Lily of the Valley"],
+      "middle": ["Coconut Cream", "Vanilla", "Sweet Rice"],
+      "base": ["Vanilla", "Cashmere Wood"]
+    },
+    "description": "Creamy tropical coconut, vanilla sugar, and sweet rice — sunset at the beach.",
+    "image": "Images and Videos/SORRENTO.jpg",
+    "status": "in-stock",
+    "badge": "new",
+    "collection": null
+  },
+  {
+    "id": "utopia",
+    "name": "Utopia",
+    "edition": "Extrait de Parfum",
+    "sizes": ["100ml"],
+    "price_idr": 749000,
+    "family": "Woody & Vanilla",
+    "gender": "Unisex",
+    "inspired_by": "Clouds Vanilla",
+    "notes": {
+      "top": ["Bergamot", "Vanilla"],
+      "middle": ["Coconut Cream", "Marshmallow"],
+      "base": ["Cashmere Wood", "Musk"]
+    },
+    "description": "Vanilla clouds — sweet, soft, dreamy. Currently sold out.",
+    "image": "Images and Videos/REFLECTION.jpg",
+    "status": "sold-out",
+    "badge": null,
+    "collection": null
+  },
+  {
+    "id": "vanilla-clouds",
+    "name": "Vanilla Clouds",
+    "edition": "Extrait de Parfum",
+    "sizes": ["50ml"],
+    "price_idr": 549000,
+    "family": "Gourmand",
+    "gender": "Unisex",
+    "inspired_by": "Vanilla Gourmand",
+    "notes": {
+      "top": ["Vanilla", "Coconut"],
+      "middle": ["Sweet Rice", "Cream"],
+      "base": ["Cashmere Wood", "Musk"]
+    },
+    "description": "Soft vanilla gourmand — comfort in a bottle. Currently sold out.",
+    "image": "Images and Videos/SORRENTO.jpg",
+    "status": "sold-out",
+    "badge": null,
+    "collection": null
+  },
+  {
+    "id": "matcha-sundays",
+    "name": "Matcha Sundays",
+    "edition": "Eau de Parfum",
+    "sizes": ["50ml", "100ml"],
+    "price_idr": 449000,
+    "family": "Fresh & Aquatic",
+    "gender": "Unisex",
+    "inspired_by": "Green Tea",
+    "notes": {
+      "top": ["Matcha", "Bergamot"],
+      "middle": ["Green Tea", "Lily"],
+      "base": ["White Musk", "Cedar"]
+    },
+    "description": "Green tea tranquility — matcha, bergamot, and clean white musk.",
+    "image": "Images and Videos/INCEPTION.png",
+    "status": "in-stock",
+    "badge": "new",
+    "collection": null
+  }
+]
