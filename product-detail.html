@@ -105,7 +105,7 @@
             return;
         }
 
-        await catalog.init("#collection-grid", null);
+        await catalog.loadProductsOnly();
         const product = catalog.getProductById(id);
 
         if (!product) {

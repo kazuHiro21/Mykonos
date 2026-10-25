@@ -28,7 +28,19 @@ class ProductCatalog {
             this.filtered = [...this.products];
         } catch (err) {
             console.error("Failed to load products:", err);
-            this.container.innerHTML = '<p style="color:var(--text-muted); text-align:center; padding:40px;">Unable to load catalog. Please try again later.</p>';
+            if (this.container) {
+                this.container.innerHTML = '<p style="color:var(--text-muted); text-align:center; padding:40px;">Unable to load catalog. Please try again later.</p>';
+            }
+        }
+    }
+
+    async loadProductsOnly() {
+        try {
+            const res = await fetch("data/products.json");
+            this.products = await res.json();
+            this.filtered = [...this.products];
+        } catch (err) {
+            console.error("Failed to load products:", err);
         }
     }
 

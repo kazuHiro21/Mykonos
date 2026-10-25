@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mykonos Parfums — The Scent of a Slow Life</title>
+    <meta name="description" content="Indonesian fragrance house. Skin-safe ingredients, long-lasting formulas, scents designed to move with you through every moment.">
+    <meta property="og:title" content="Mykonos Parfums — The Scent of a Slow Life">
+    <meta property="og:description" content="Born in Indonesia. Built for the world.">
+    <meta property="og:type" content="website">
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/layout.css">
@@ -19,37 +23,55 @@
 <div class="nebula"></div>
 <div class="stars"></div>
 
-<nav class="navbar">
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
     <div class="nav-container">
-        <div class="logo">MYKONOS</div>
-        <ul class="nav-links">
+        <div class="logo" id="logo">MYKONOS</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="nav-link active">HOME</a></li>
             <li><a href="#collection">COLLECTION</a></li>
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
-        <button class="nav-mobile-btn" aria-label="Menu">☰</button>
+        <div class="nav-actions">
+            <button class="nav-mobile-btn" id="nav-mobile-btn" aria-label="Toggle Menu">☰</button>
+            <button class="nav-cart-btn" id="nav-cart-btn" aria-label="Shopping Bag">🛍 <span id="cart-count">0</span></button>
+        </div>
     </div>
 </nav>
 
-<!-- HERO — Apple-style landing first section -->
-<section class="hero landing-hero">
-    <div class="hero-bg" style="background-image: url('Images and Videos/mykonos-grece.jpg')"></div>
+<!-- HERO -->
+<section class="hero landing-hero" id="home">
+    <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <span class="hero-tag">New Collection</span>
-        <h1>MYKONOS</h1>
-        <p>Born in Indonesia. Built for the world.<br>The scent of a slow life.</p>
+    <div class="hero-content reveal">
+        <span class="hero-tag">New Collection • 2026</span>
+        <h1 class="split-text">MYKONOS</h1>
+        <p class="hero-sub">Born in Indonesia.<br>Built for the world.<br>The scent of a slow life.</p>
         <div class="hero-actions">
             <a href="#collection" class="btn btn-primary">Explore Collection</a>
             <a href="#about" class="btn btn-secondary">Our Story</a>
         </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-indicator"></div>
+        </div>
     </div>
 </section>
 
-<!-- FEATURED SCENTS — horizontal highlight -->
+<!-- PROMO BAR -->
+<section class="promo-bar">
+    <div class="promo-content reveal">
+        <span class="promo-icon">🎁</span>
+        <span class="promo-text">FREE VIALS FOR EVERY PURCHASE • Limited time offer</span>
+        <a href="#collection" class="promo-link">Shop Now →</a>
+    </div>
+</section>
+
+<!-- FEATURED SCENTS -->
 <section class="section landing-section" id="featured">
     <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
             <h2>Featured <span>Scents</span></h2>
             <p>Our most-loved fragrances, now with more to love.</p>
         </div>
@@ -57,9 +79,9 @@
     </div>
 </section>
 
-<!-- BRAND STORY — centered text + image -->
-<section class="section landing-section story-section" id="story">
-    <div class="container story-layout">
+<!-- BRAND STORY -->
+<section class="section landing-section story-section" id="about">
+    <div class="container story-layout reveal">
         <div class="story-text">
             <h2>The Scent of <span>a Slow Life</span></h2>
             <p class="story-lead">
@@ -71,20 +93,34 @@
                 Today, Mykonos expands across Southeast Asia and beyond, with branches in Malaysia and the Philippines,
                 and a recent entry into the United States market.
             </p>
-            <a href="#about" class="btn btn-secondary">Read Our Story</a>
+            <div class="story-stats">
+                <div class="stat-item">
+                    <span class="stat-number">75+</span>
+                    <span class="stat-label">Fragrances</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Countries</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2026</span>
+                    <span class="stat-label">US Launch</span>
+                </div>
+            </div>
         </div>
-        <div class="story-image">
+        <div class="story-image reveal">
             <div class="story-media-wrap">
-                <img src="Images and Videos/mykonos-grece.jpg" alt="Mykonos Brand" loading="lazy" onerror="this.style.display='none'">
+                <img src="Images and Videos/mykonos-grece.jpg" alt="Mykonos Brand" loading="lazy">
+                <div class="image-overlay"></div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- COLLECTION CATEGORIES — Apple-style category tiles -->
+<!-- SCENT FAMILIES -->
 <section class="section landing-section" id="categories">
     <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
             <h2>Shop by <span>Scent Family</span></h2>
             <p>Discover your signature scent across our fragrance families.</p>
         </div>
@@ -93,34 +129,108 @@
 </section>
 
 <!-- FULL COLLECTION -->
-<section class="section landing-section" id="collection">
+<section class="section landing-section collection-section" id="collection">
     <div class="container">
-        <div class="section-header">
-            <h2>The <span>Collection</span></h2>
-            <p>All fragrances. Filter by family, or browse everything.</p>
-        </div>
-        <div class="collection-header-actions">
-            <div class="collection-count" id="collection-count"></div>
-            <div class="filters" id="filters"></div>
+        <div class="collection-header reveal">
+            <div class="section-header">
+                <h2>The <span>Collection</span></h2>
+                <p>All fragrances. Filter by family, or browse everything.</p>
+            </div>
+            <div class="collection-actions">
+                <div class="collection-count" id="collection-count">75+ scents</div>
+                <div class="filters" id="filters"></div>
+            </div>
         </div>
         <div class="products-grid" id="collection-grid"></div>
+        <div class="load-more-wrap reveal" style="text-align:center; margin-top:40px;">
+            <button class="btn btn-secondary load-more-btn" id="load-more-btn">Load More</button>
+        </div>
     </div>
 </section>
 
 <!-- NEWSLETTER -->
 <section class="section landing-section newsletter-section">
-    <div class="container newsletter-card">
+    <div class="container newsletter-card reveal">
         <div class="newsletter-content">
             <h2>Join the <span>List</span></h2>
             <p>Get early access to new releases, restocks, and exclusive offers.</p>
             <form class="newsletter-form" id="newsletter-form">
-                <input type="email" placeholder="Enter your email" required />
-                <button type="submit" class="btn btn-primary">Subscribe</button>
+                <div class="newsletter-inputs">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email" required />
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+                <div class="form-message" id="newsletter-message"></div>
             </form>
         </div>
     </div>
 </section>
 
+<!-- CONTACT -->
+<section class="section landing-section contact-section" id="contact">
+    <div class="container">
+        <div class="section-header reveal">
+            <h2>Contact <span>Mykonos</span></h2>
+            <p>Reach us for inquiries, wholesale, or fragrance questions.</p>
+        </div>
+        <div class="contact-layout reveal">
+            <div class="contact-info-wrap">
+                <h3>Get in Touch</h3>
+                <div class="contact-info-item">
+                    <span class="contact-icon">✉</span>
+                    <div>
+                        <strong>Email</strong>
+                        <span>hello@mykonosparfums.com</span>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <strong>Locations</strong>
+                        <span>Indonesia • Malaysia • Philippines • United States</span>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <span class="contact-icon">💬</span>
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <span>+62 812-3456-7890</span>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <span class="contact-icon">⏰</span>
+                    <div>
+                        <strong>Hours</strong>
+                        <span>Mon–Sat, 10:00 AM – 7:00 PM WIB</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-wrap">
+                <form class="contact-form" id="contact-form">
+                    <div class="input-group">
+                        <label for="c-name">Name</label>
+                        <input type="text" id="c-name" placeholder="Your name" required />
+                    </div>
+                    <div class="input-group">
+                        <label for="c-email">Email</label>
+                        <input type="email" id="c-email" placeholder="you@example.com" required />
+                    </div>
+                    <div class="input-group">
+                        <label for="c-subject">Subject</label>
+                        <input type="text" id="c-subject" placeholder="How can we help?" required />
+                    </div>
+                    <div class="input-group">
+                        <label for="c-message">Message</label>
+                        <textarea id="c-message" rows="5" placeholder="Write your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary contact-submit">Send Message</button>
+                    <div class="form-message" id="contact-message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
     <div class="container">
         <div class="footer-grid">
@@ -166,91 +276,33 @@
     </div>
 </footer>
 
-<script src="assets/js/config.js"></script>
-<script src="assets/js/products.js"></script>
-<script src="assets/js/nav.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", async () => {
-        initNav();
-        await catalog.init("#collection-grid", "collection-count");
+<!-- QUICK VIEW MODAL -->
+<div class="quick-view-modal" id="quick-view-modal">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content" id="modal-content">
+        <button class="modal-close" id="modal-close">✕</button>
+        <div class="modal-body" id="modal-body"></div>
+    </div>
+</div>
 
-        // Featured scents (best sellers + new)
-        const featured = catalog.products.filter(p => p.badge === "best-seller" || p.badge === "new");
-        const featuredGrid = document.getElementById("featured-grid");
-        if (featuredGrid) {
-            featuredGrid.innerHTML = featured.map(p => catalog.cardHTML(p)).join("");
-        }
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cart-drawer">
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h3>Shopping Bag</h3>
+            <button class="cart-close" id="cart-close">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items injected by JS -->
+        </div>
+        <div class="cart-footer" id="cart-footer">
+            <!-- Cart total injected by JS -->
+        </div>
+    </div>
+</div>
 
-        // Category tiles
-        const categories = [
-            { name: "Fresh & Aquatic", key: "Fresh & Aquatic" },
-            { name: "Citrus", key: "Citrus" },
-            { name: "Fruity & Gourmand", key: "Fruity & Gourmand" },
-            { name: "Woody & Spicy", key: "Woody & Spicy" },
-            { name: "Floral", key: "Floral" },
-            { name: "Woody & Vanilla", key: "Woody & Vanilla" },
-            { name: "Sunforged Collection", key: "sunforged" },
-            { name: "Special Edition", key: "Special Edition" }
-        ];
-        const catGrid = document.getElementById("category-grid");
-        if (catGrid) {
-            catGrid.innerHTML = categories.map(c => `
-                <button class="category-tile" data-filter="${c.key}">
-                    <span class="category-name">${c.name}</span>
-                </button>
-            `).join("");
-            catGrid.querySelectorAll(".category-tile").forEach(btn => {
-                btn.addEventListener("click", () => {
-                    catalog.setFilter(btn.dataset.filter);
-                    document.getElementById("collection").scrollIntoView({ behavior: "smooth" });
-                });
-            });
-        }
-
-        // Filter buttons for collection section
-        const filterLabels = {
-            all: "All",
-            "Fresh & Aquatic": "Fresh & Aquatic",
-            Citrus: "Citrus",
-            "Fruity & Gourmand": "Fruity & Gourmand",
-            "Woody & Spicy": "Woody & Spicy",
-            Floral: "Floral",
-            "Woody & Vanilla": "Woody & Vanilla",
-            Gourmand: "Gourmand",
-            "Floral & Musky": "Floral & Musky",
-            Sunforged: "Sunforged Collection",
-            "Special Edition": "Special Edition"
-        };
-        const filtersEl = document.getElementById("filters");
-        const allFilters = ["all", ...Object.keys(filterLabels).filter(f => f !== "all")];
-        filtersEl.innerHTML = allFilters.map(f => `
-            <button class="filter-btn" data-filter="${f}">${filterLabels[f] || f}</button>
-        `).join("");
-        filtersEl.querySelectorAll(".filter-btn").forEach(btn => {
-            btn.addEventListener("click", () => {
-                catalog.setFilter(btn.dataset.filter);
-            });
-        });
-
-        // Newsletter form
-        const nlForm = document.getElementById("newsletter-form");
-        if (nlForm) {
-            nlForm.addEventListener("submit", (e) => {
-                e.preventDefault();
-                const btn = nlForm.querySelector("button");
-                const orig = btn.textContent;
-                btn.textContent = "Subscribed...";
-                btn.disabled = true;
-                setTimeout(() => {
-                    btn.textContent = "Subscribe";
-                    btn.disabled = false;
-                    nlForm.reset();
-                    alert("Thank you for subscribing!");
-                }, 1000);
-            });
-        }
-    });
-</script>
+<script type="module" src="assets/js/app.js"></script>
 
 </body>
 </html>
